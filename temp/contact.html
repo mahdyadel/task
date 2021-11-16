@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <title>xgcode</title>
+
+
+    <link rel="stylesheet" href="{{ asset('backend') }}/css/bootstrap-rtl.css">
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.css">
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/css/nice-select.min.css"/>
+    <link rel="stylesheet" href="{{ asset('backend') }}/css/font-awesome.min.css">
+    <link rel="stylesheet" href="{{ asset('backend') }}/css/style.css">
+
+</head>
+<body>
+
+
+<header>
+
+    <div class="menu-logo py-3">
+        <div class="container">
+            <div class="menu-wrapper">
+                <div class="row">
+
+
+                    <div class="col-lg-6 col-md-6   align-self-md-center d-md-flex ">
+                        <ul class="list-inline user-nav">
+                            <li class="list-inline-item"><a href="">الرئيسية</a></li>
+                            <li class="list-inline-item"><a href="">الدعم الفني</a></li>
+                            <li class="list-inline-item"><a href="">اتصل بنا</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-lg-6 col-md-6 align-items-center d-md-flex justify-content-end gap-4">
+                        <div id="cl_switcher_wrapper">
+                            <div id="cl_switcher">
+                                <button id="cl_toggle" type="button" role="button" class="btn btn-white-outlined">
+                                    <i class="currency-flag currency-flag-usd"></i>
+                                    <span>$</span>
+                                </button>
+                                <ul id="cl_list" data-simplebar data-simplebar-direction='rtl'>
+                                    <li class="col">
+                                        <span class="col__title"><h4>العملة</h4></span>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_24498"
+                                                   value="SAR" data-symbol="ر.س">
+                                            <label for="currency_opt_24498">
+                                                <i class="currency-flag currency-flag-sar"></i>
+                                                <span>ريال سعودي</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_38391"
+                                                   value="USD" checked="" data-symbol="$">
+                                            <label for="currency_opt_38391">
+                                                <i class="currency-flag currency-flag-usd"></i>
+                                                <span>دولار أمريكي</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67352"
+                                                   value="AED" data-symbol=" د.إ">
+                                            <label for="currency_opt_67352">
+                                                <i class="currency-flag currency-flag-aed"></i>
+                                                <span>درهم اماراتي</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67353"
+                                                   value="BHD" data-symbol="د.ب">
+                                            <label for="currency_opt_67353">
+                                                <i class="currency-flag currency-flag-bhd"></i>
+                                                <span>دينار بحريني</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67354"
+                                                   value="AUD" data-symbol="$">
+                                            <label for="currency_opt_67354">
+                                                <i class="currency-flag currency-flag-aud"></i>
+                                                <span>دولار استرالي</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67355"
+                                                   value="CAD" data-symbol="$">
+                                            <label for="currency_opt_67355">
+                                                <i class="currency-flag currency-flag-cad"></i>
+                                                <span>دولار كندي</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67356"
+                                                   value="EUR" data-symbol="€">
+                                            <label for="currency_opt_67356">
+                                                <i class="currency-flag currency-flag-eur"></i>
+                                                <span>يورو</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67357"
+                                                   value="CNY" data-symbol="¥">
+                                            <label for="currency_opt_67357">
+                                                <i class="currency-flag currency-flag-cny"></i>
+                                                <span>رنمينبي</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67358"
+                                                   value="DZD" data-symbol="دج">
+                                            <label for="currency_opt_67358">
+                                                <i class="currency-flag currency-flag-dzd"></i>
+                                                <span>دينار جزائري</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67359"
+                                                   value="EGP" data-symbol="ج.م">
+                                            <label for="currency_opt_67359">
+                                                <i class="currency-flag currency-flag-egp"></i>
+                                                <span>جنيه مصري</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67360"
+                                                   value="GBP" data-symbol="£">
+                                            <label for="currency_opt_67360">
+                                                <i class="currency-flag currency-flag-gbp"></i>
+                                                <span>جنيه استرليني</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67361"
+                                                   value="IDR" data-symbol="Rp">
+                                            <label for="currency_opt_67361">
+                                                <i class="currency-flag currency-flag-idr"></i>
+                                                <span>روبية إندونيسية</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67362"
+                                                   value="INR" data-symbol="Rp">
+                                            <label for="currency_opt_67362">
+                                                <i class="currency-flag currency-flag-inr"></i>
+                                                <span>روبية هندية</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67363"
+                                                   value="IQD" data-symbol="د.ع">
+                                            <label for="currency_opt_67363">
+                                                <i class="currency-flag currency-flag-iqd"></i>
+                                                <span>دينار عراقي</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67364"
+                                                   value="JOD" data-symbol="JOD">
+                                            <label for="currency_opt_67364">
+                                                <i class="currency-flag currency-flag-jod"></i>
+                                                <span>دينار أردني</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67365"
+                                                   value="JPY" data-symbol="¥">
+                                            <label for="currency_opt_67365">
+                                                <i class="currency-flag currency-flag-jpy"></i>
+                                                <span>ين ياباني</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67366"
+                                                   value="KWD" data-symbol="د.ك">
+                                            <label for="currency_opt_67366">
+                                                <i class="currency-flag currency-flag-kwd"></i>
+                                                <span>دينار كويتي</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67367"
+                                                   value="LBP" data-symbol="ل.ل">
+                                            <label for="currency_opt_67367">
+                                                <i class="currency-flag currency-flag-lbp"></i>
+                                                <span>ليرة لبنانية</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67368"
+                                                   value="LYD" data-symbol="LD">
+                                            <label for="currency_opt_67368">
+                                                <i class="currency-flag currency-flag-lyd"></i>
+                                                <span>دينار ليبي</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67369"
+                                                   value="MAD" data-symbol="د.م.">
+                                            <label for="currency_opt_67369">
+                                                <i class="currency-flag currency-flag-mad"></i>
+                                                <span>درهم مغربي</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67370"
+                                                   value="MRO" data-symbol="UM">
+                                            <label for="currency_opt_67370">
+                                                <i class="currency-flag currency-flag-mro"></i>
+                                                <span>أوقية موريتانية</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67371"
+                                                   value="MYR" data-symbol="RM">
+                                            <label for="currency_opt_67371">
+                                                <i class="currency-flag currency-flag-myr"></i>
+                                                <span>رينغيت ماليزي</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67372"
+                                                   value="OMR" data-symbol="ر.ع">
+                                            <label for="currency_opt_67372">
+                                                <i class="currency-flag currency-flag-omr"></i>
+                                                <span>ريال عماني</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67373"
+                                                   value="PKR" data-symbol="Rs.">
+                                            <label for="currency_opt_67373">
+                                                <i class="currency-flag currency-flag-pkr"></i>
+                                                <span>روبية باكستانية</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67374"
+                                                   value="QAR" data-symbol="ر.ق">
+                                            <label for="currency_opt_67374">
+                                                <i class="currency-flag currency-flag-qar"></i>
+                                                <span>ريال قطري</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67375"
+                                                   value="SDG" data-symbol="SDG">
+                                            <label for="currency_opt_67375">
+                                                <i class="currency-flag currency-flag-sdg"></i>
+                                                <span>جنيه سوداني</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67376"
+                                                   value="SEK" data-symbol="kr">
+                                            <label for="currency_opt_67376">
+                                                <i class="currency-flag currency-flag-sek"></i>
+                                                <span>كرونة سويدية</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67377"
+                                                   value="SYP" data-symbol="SYP">
+                                            <label for="currency_opt_67377">
+                                                <i class="currency-flag currency-flag-syp"></i>
+                                                <span>ليرة سورية</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67378"
+                                                   value="TND" data-symbol="د.ت">
+                                            <label for="currency_opt_67378">
+                                                <i class="currency-flag currency-flag-tnd"></i>
+                                                <span>دينار تونسي</span>
+                                            </label>
+                                        </div>
+                                        <div class="checkbox radio">
+                                            <input name="currency_option" type="radio" id="currency_opt_67379"
+                                                   value="TRY" data-symbol="₺">
+                                            <label for="currency_opt_67379">
+                                                <i class="currency-flag currency-flag-try"></i>
+                                                <span>ليرة تركية</span>
+                                            </label>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <ul class="list-inline user-nav">
+                            <li class="dropdown-cart-wrapper d-inline-block">
+                                <div class="text-center">
+                                    <a href="#" id="cart">
+                                        <div class="cart-text"><span class="badge">1</span> <i
+                                                class="fa fa-shopping-cart"></i>
+                                            السلة
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="shopping-cart ">
+                                    <div class="shopping-cart-header">
+                                        <div class="shopping-cart-total">
+                                            <span class="lighter-text">Total:</span>
+                                            <span class="main-color-text total">$461.15</span>
+                                        </div>
+                                    </div> <!--end shopping-cart-header -->
+
+                                    <ul class="shopping-cart-items list-unstyled" data-simplebar
+                                        data-simplebar-direction='rtl'>
+                                        <li class="clearfix">
+                                            <img src="{{ asset('backend') }}/images/apps.6194.63443774180296696.cd362176-f5a8-4466-88f8-b7d68650d970.png"
+                                                 alt="item1"/>
+                                            <span class="item-name">XMREDTREE</span>
+                                            <span class="item-detail">Pack 100</span>
+                                            <span class="item-price">$49.50</span>
+                                            <span class="item-quantity">Quantity: 01</span>
+                                            <a href="" class="delete-item"><i class="fa fa-close"></i></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <img src="{{ asset('backend') }}/images/apps.6194.63443774180296696.cd362176-f5a8-4466-88f8-b7d68650d970.png"
+                                                 alt="item1"/>
+                                            <span class="item-name">XMREDTREE</span>
+                                            <span class="item-detail">Pack 100</span>
+                                            <span class="item-price">$49.50</span>
+                                            <span class="item-quantity">Quantity: 01</span>
+                                            <a href="" class="delete-item"><i class="fa fa-close"></i></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <img src="{{ asset('backend') }}/images/apps.6194.63443774180296696.cd362176-f5a8-4466-88f8-b7d68650d970.png"
+                                                 alt="item1"/>
+                                            <span class="item-name">XMREDTREE</span>
+                                            <span class="item-detail">Pack 100</span>
+                                            <span class="item-price">$49.50</span>
+                                            <span class="item-quantity">Quantity: 01</span>
+                                            <a href="" class="delete-item"><i class="fa fa-close"></i></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <img src="{{ asset('backend') }}/images/apps.6194.63443774180296696.cd362176-f5a8-4466-88f8-b7d68650d970.png"
+                                                 alt="item1"/>
+                                            <span class="item-name">XMREDTREE</span>
+                                            <span class="item-detail">Pack 100</span>
+                                            <span class="item-price">$49.50</span>
+                                            <span class="item-quantity">Quantity: 01</span>
+                                            <a href="" class="delete-item"><i class="fa fa-close"></i></a>
+                                        </li>
+                                        <li class="clearfix">
+                                            <img src="{{ asset('backend') }}/images/apps.6194.63443774180296696.cd362176-f5a8-4466-88f8-b7d68650d970.png"
+                                                 alt="item1"/>
+                                            <span class="item-name">XMREDTREE</span>
+                                            <span class="item-detail">Pack 100</span>
+                                            <span class="item-price">$49.50</span>
+                                            <span class="item-quantity">Quantity: 01</span>
+                                            <a href="" class="delete-item"><i class="fa fa-close"></i></a>
+                                        </li>
+                                    </ul>
+
+                                    <a href="#" class="button">دفع</a>
+                                </div>
+                            </li>
+                            <li class="nav-item dropdown list-inline-item">
+                                <a class="nav-link " href="#" data-bs-toggle="modal" data-bs-target="#LoginModal">
+                                    <i class="fa fa-user"></i> دخول
+                                </a>
+
+                            </li>
+                        </ul>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light shadow">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="images/logo.png" alt="" class="img-fluid" loading="lazy">
+
+            </a>
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbar-content">
+                <div class="hamburger-toggle">
+                    <div class="hamburger">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-content">
+                <ul class="navbar-nav mr-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#">الرئيسية</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger" href="#">تخفيضات</a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                           data-bs-auto-close="outside">
+                            اشتراكات iPTV</a>
+                        <ul class="dropdown-menu shadow">
+                            <li><a class="dropdown-item" href="#">اشتراك سنه</a></li>
+                            <li><a class="dropdown-item" href="blog.html">اشتراك 6 اشهر</a></li>
+
+                            <li class="dropend">
+                                <a href="#" class="dropdown-item dropdown-toggle" data-bs-toggle="dropdown"
+                                   data-bs-auto-close="outside">IPTV</a>
+                                <ul class="dropdown-menu shadow">
+                                    <li><a class="dropdown-item" href="">Free IPTV</a></li>
+                                    <li><a class="dropdown-item" href="">اشتراك شهر</a></li>
+                                    <li><a class="dropdown-item" href="">اشتراك تجريبي</a></li>
+
+                                </ul>
+                            </li>
+
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">من نحن</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">اتصل بنا</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">الدعم الفني</a>
+                    </li>
+
+                </ul>
+                <form class="d-flex ms-auto search-form">
+                    <div class="input-group">
+                        <input class="form-control border-0 mr-2" type="search" placeholder="بحث عن منتح .."
+                               aria-label="Search">
+                        <button class="btn btn-primary border-0" type="submit"><i class="fa fa-search"></i></button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </nav>
+
+</header>
+<!-- Modal -->
+<div class="modal fade" id="LoginModal" tabindex="-1" aria-labelledby="LoginModal" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">دخول</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body text-center login-modal pb-5">
+                <h5 class="mb-4"> اختر طريقة الدخول</h5>
+                <button id="emailTrigger" data-name="email" class="btn btn-yellow-outlined me-4">دخول بالبريد
+                    الالكتروني
+                </button>
+                <button id="phoneTrigger" data-name="phone" class="btn btn-yellow-outlined">دخول برقم الجوال</button>
+
+                <input type="email"  data-name="email" class="form-control login-option"
+                       placeholder="بريدك الالكتروني">
+                <input type="text"   data-name="phone" class="form-control login-option" placeholder="رقم الجوال">
+
+
+                <input type="submit" value="ارسال كود التحقق" class="btn-submit btn btn-dark mt-4 ">
+
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<section class="contact-us-page py-5">
+ <div class="container">
+     <div class="section-title">اتصل بنا</div>
+
+     <div class="row">
+         <div class="col-md-6">
+             <form class="contact-us-form">
+                 <input type="text" placeholder="اسمك" class="form-control">
+                 <input type="email" placeholder="البريد الاكتروني" class="form-control">
+                 <textarea rows="6" class="form-control" placeholder="رسالتك"></textarea>
+                 <input type="submit" class="btn btn-yellow rounded-0" value="ارسال ">
+             </form>
+         </div>
+         <div class="col-md-6">
+
+             <ul class="list-unstyled contact-info ">
+                 <li><i class="fa fa-mobile-phone "></i> <a href="tel:+20 100007666">20 100007666</a></li>
+                 <li><i class="fa fa-whatsapp"></i> <a href="https://wa.me/+20 100007666">20 100007666</a></li>
+                 <li><i class="fa fa-send-o"></i> <a href="mailto:+admin@domain.com">admin@domain.com</a></li>
+                 <li><i class="fa fa-map-marker"></i> <a href="//maps.google.com" target="_blank">المملكة العربية السعودية - الرياض</a></li>
+              </ul>
+         </div>
+     </div>
+ </div>
+</section>
+
+
+
+
+<footer>
+
+    <div class="container">
+
+        <div class="text-center">
+
+            <div class="social-icons mb-3">
+                <ul class="list-inline">
+                    <li class="list-inline-item"><a href=""><i class="fa fa-facebook"></i></a></li>
+                    <li class="list-inline-item"><a href=""><i class="fa fa-twitter"></i></a></li>
+                    <li class="list-inline-item"><a href=""><i class="fa fa-youtube"></i></a></li>
+                    <li class="list-inline-item"><a href=""><i class="fa fa-telegram"></i></a></li>
+                    <li class="list-inline-item"><a href=""><i class="fa fa-phone"></i></a></li>
+                </ul>
+            </div>
+
+            <div class="payment-methods mb-4">
+
+                <img src="https://assets.salla.cloud/themes/default/assets/images/mada.png?v=v1.4.134" alt=" ">
+                <img src="https://assets.salla.cloud/themes/default/assets/images/cc.png?v=v1.4.134" alt=" ">
+                <img src="https://assets.salla.cloud/themes/default/assets/images/applepay.svg?v=v1.4.134" alt=" ">
+
+            </div>
+
+            <ul class="footer-nav list-inline">
+                <li class="list-inline-item"><a href="">رابط</a></li>
+                <li class="list-inline-item"><a href="">رابط</a></li>
+                <li class="list-inline-item"><a href="">رابط</a></li>
+                <li class="list-inline-item"><a href="">رابط</a></li>
+            </ul>
+
+        </div>
+
+
+    </div>
+    <div class="copyrights">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p><a href="http://www.serv5.com"> برمجة سيرف فايف
+                    </a></p>
+
+                </div>
+                <div class="col-md-6">
+                    <p class="cr">جميع الحقوق محفوظة © 2017</p>
+
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+</footer>
+<a href="#" class="go-top"><i class="fa fa-chevron-up"></i></a>
+
+<script src="{{ asset('backend') }}/js/jquery-3.3.1.min.js"></script>
+<script src="{{ asset('backend') }}/js/bootstrap-rtl.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/simplebar@latest/dist/simplebar.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-nice-select/1.1.0/js/jquery.nice-select.min.js"></script>
+<script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
+<script src="{{ asset('backend') }}/js/bootstrap-input-spinner.js"></script>
+<script src="{{ asset('backend') }}/js/custom.js"></script>
+</body>
+</html>
