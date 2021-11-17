@@ -1,0 +1,24 @@
+-------------------- Auto-Git Log --------------------
+		Wed Nov 17 2021 12:29:52 GMT+0200 (توقيت شرق أوروبا الرسمي)
+------------------------------------------------------
+
+Modified files:
+* app/Brand.php
+* app/Http/Controllers/Dashboard/BrandController.php
+* composer.json
+* composer.lock
+* config/app.php
+* database/migrations/2021_11_17_092602_create_brand_translations_table.php
+* resources/views/dashboard/brands/create.blade.php
+
+
+Created files:
+* .autogit/logs/log-17-10-2021-11-43-41.txt
+* resources/lang/en/brand.php
+
+
+Deleted files:
+* config/translatable.php
+
+
+Renamed files:

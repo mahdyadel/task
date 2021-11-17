@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Dashboard;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use App\Brand;
+use Illuminate\Validation\Rule;
 
 class BrandController extends Controller
 {
@@ -15,7 +16,7 @@ class BrandController extends Controller
      */
     public function index()
     {
-        $brands = Brand::all();
+        $brands = Brand::paginate(5);
 
         return view('dashboard.brands.index' , compact('brands'));
 
@@ -38,8 +39,26 @@ class BrandController extends Controller
      */
     public function store(Request $request)
     {
-        //
-    }
+       
+
+        $rules = [];
+
+        foreach (config('translatable.locales') as $locale) {
+
+            $rules += [$locale . '.title' => ['required', Rule::unique('brand_translations', 'title')]];
+            $rules += [$locale . '.description' => ['required', Rule::unique('brand_translations', 'description')]];
+
+
+        }//end of for each
+
+        $request->validate($rules);
+
+        Brand::create($request->all());
+            // Redirect to the previous page successfully    
+     
+        return redirect()->route('dashboard.brands.index');
+
+    }//end of store
 
     /**
      * Display the specified resource.
