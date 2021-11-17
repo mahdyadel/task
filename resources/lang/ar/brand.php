@@ -8,7 +8,7 @@ return [
     ],
 
     'en' => [
-        'name' => 'Title',
+        'title' => 'Title',
         'description' => 'Description',
     ],
 

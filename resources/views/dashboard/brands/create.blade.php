@@ -33,6 +33,8 @@
             </div>
         @endforeach
 
+        
+
         <div class="form-group">
             <button type="submit" class="btn btn-primary"><i class="fa fa-plus">Add Brand</i></button>
         </div>

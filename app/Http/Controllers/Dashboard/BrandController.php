@@ -102,6 +102,12 @@ class BrandController extends Controller
      */
     public function destroy($id)
     {
-        //
-    }
-}
+   
+        $task = Brand::find($id);
+        $task->delete();
+        session()->flash('success', __('site.deleted_successfully'));
+        return redirect()->route('dashboard.brands.index');
+    }// end of destroy
+
+}//end of controller 
+
