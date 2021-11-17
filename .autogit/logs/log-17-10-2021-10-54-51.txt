@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Wed Nov 17 2021 10:54:51 GMT+0200 (توقيت شرق أوروبا الرسمي)
+------------------------------------------------------
+
+Modified files:
+
+
+Created files:
+* .autogit/autogit.json
+* public/uploads/7PAO8bfYQJUrW4tVCMdYEQCZXXzowkFVk6Gs00ZM.png
+* public/uploads/dGE4mKzZDcpfspclqcoPzQxKkmHLksoycefFNvN8.jpeg
+* public/uploads/jqBmig2Yp3CFTu37yklhq3aeeVZksl7aSfFAKnnS.jpeg
+
+
+Deleted files:
+
+
+Renamed files:

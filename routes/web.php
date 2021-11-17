@@ -26,8 +26,13 @@ Route::prefix('admin')
             ->group(function() {
                 Route::get('/', 'Dashboard\WelcomController@index')->name('welcome');
 
+                //route tasks
                 Route::resource('tasks', 'Dashboard\TaskController')->except(['show']);
-                ;
+
+                // route brand
+                Route::resource('brands', 'Dashboard\BrandController')->except(['show']);
+
+               
             });
 
 

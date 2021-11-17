@@ -10,6 +10,10 @@ w<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
     <li><a class="app-menu__item" href="{{ route('dashboard.welcome') }}"><i class="app-menu__icon fa fa-dashboard"></i><span class="app-menu__label">Dashboard</span></a></li>
     
     <li><a class="app-menu__item " href="{{ route('dashboard.tasks.index') }}"><i class="app-menu__icon fa fa-list"></i><span class="app-menu__label">Tasks</span></a></li>
+
+//brand
+    <li><a class="app-menu__item " href="{{ route('dashboard.brands.index') }}"><i class="app-menu__icon fa fa-list"></i><span class="app-menu__label">Brands</span></a></li>
+
    
 
 
