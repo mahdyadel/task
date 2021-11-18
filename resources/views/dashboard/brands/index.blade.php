@@ -46,7 +46,7 @@
                 </thead>
                 <tbody>
                     @foreach($brands as $index=> $brand)
-
+{{dd($brand)}}
                         <tr>
                             <td>{{ $index+1 }}</td>
                             <td>{{ $brand->title }}</td>
@@ -113,12 +113,10 @@
     })
   </script>
   <script>
-    $(document).ready(function() {
-
-        var url = "{{ route('dashboard.brands.index') }}"
-        $('#example').DataTable( {
-            "ajax": url
-        } );
-    } );        
+      $(document).ready(function() {
+    $('#example').DataTable( {
+       
+    } );
+} );
   </script>
   @endsection

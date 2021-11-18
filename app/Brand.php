@@ -2,6 +2,7 @@
 
 namespace App;
 
+use App\BrandTranslation;
 use Illuminate\Database\Eloquent\Model;
 
 class Brand extends Model
@@ -14,4 +15,7 @@ class Brand extends Model
     public $translatedAttributes = ['title', 'description'];
 
     
+    public function brand(){
+        return $this->hasMany(BrandTranslation::class);
+    }
 }// end of class brand

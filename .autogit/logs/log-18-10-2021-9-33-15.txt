@@ -1,0 +1,30 @@
+-------------------- Auto-Git Log --------------------
+		Thu Nov 18 2021 09:33:15 GMT+0200 (توقيت شرق أوروبا الرسمي)
+------------------------------------------------------
+
+Modified files:
+* app/Brand.php
+* app/BrandTranslation.php
+* app/Http/Controllers/Dashboard/BrandController.php
+* composer.json
+* composer.lock
+* resources/views/dashboard/brands/create.blade.php
+* resources/views/dashboard/brands/index.blade.php
+* resources/views/layouts/dashboard/_aside.blade.php
+* resources/views/layouts/dashboard/app.blade.php
+
+
+Created files:
+* .autogit/logs/log-17-10-2021-13-35-31.txt
+* public/dashboard/css/jquery.dataTables.min.css
+* public/dashboard/js/jquery-3.5.1.js
+* public/dashboard/js/jquery.dataTables.min.js
+* public/uploads/Dv3ekKY155Uz8adkggueCARKnsdPKX2LlslYA7Gt.png
+* public/uploads/Gzf8YSH3E3efd6KkOoWukVEfw3qB1vfbKAKXGKtk.jpg
+* public/uploads/Tf9iupnhtLiZBANWqmqohVCeac5IhiqVj6mJ86mm.jpg
+
+
+Deleted files:
+
+
+Renamed files:

@@ -16,9 +16,17 @@ class BrandController extends Controller
      */
     public function index()
     {
-        $brands = Brand::all();
+        $brands = Brand::with([
+            'offer' => function ($query) use ($today) {
+            $query->where('brand.locale', '1')
+            ->where('brand.using_counter', '<', 'offers.offer_limit')
+            ->whereDate('brand.start_date', '<=', $today)
+            ->whereDate('brand.end_date', '>=', $today);
+            }
+])
 
-        return json_encode($brands);
+        
+        return view('dashboard.brands.index' , compact('brands'));
 
     }// End Of Index
     /**
