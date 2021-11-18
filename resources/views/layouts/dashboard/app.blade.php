@@ -24,6 +24,15 @@
 
     <!-- Main CSS-->
     <link rel="stylesheet" type="text/css" href="{{ asset('dashboard') }}/css/main.css">
+
+
+    {{--  ///data table ajax  --}}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    
+    <link rel="stylesheet" type="text/css" href="{{ asset('dashboard') }}/css/jquery.dataTables.min.css">
+
+
+
     <!-- Font-icon css-->
     {{-- Main Css --}}
     <link rel="stylesheet" type="text/css" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -80,6 +89,9 @@
     <script src="{{ asset('dashboard') }}/plugins/select2/select2.min.js"></script>
     <script src="{{ asset('dashboard') }}/js/main.js"></script>
 
+    {{--  ///ajax//  --}}
+<script src="{{ asset('dashboard') }}/js/jquery-3.5.1.js"></script>
+<script src="{{ asset('dashboard') }}/js/jquery.dataTables.min.js"></script>
      {{--  Movie js  --}}
 
     <script src="{{ asset('dashboard') }}/js/custom/movie.js"></script>

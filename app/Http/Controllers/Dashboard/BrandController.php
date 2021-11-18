@@ -16,9 +16,9 @@ class BrandController extends Controller
      */
     public function index()
     {
-        $brands = Brand::paginate(5);
+        $brands = Brand::all();
 
-        return view('dashboard.brands.index' , compact('brands'));
+        return json_encode($brands);
 
     }// End Of Index
     /**
@@ -40,21 +40,18 @@ class BrandController extends Controller
     public function store(Request $request)
     {
        
+        $article_data = [
+            'en' => [
+                'title'       => $request->input('en_title'),
+                'description' => $request->input('en_description')
+            ],
+            'es' => [
+                'title'       => $request->input('es_title'),
+                'description' => $request->input('es_description')
+            ],
+        ];
 
-        $rules = [];
-
-        foreach (config('translatable.locales') as $locale) {
-
-            $rules += [$locale . '.title' => ['required', Rule::unique('brand_translations', 'title')]];
-            $rules += [$locale . '.description' => ['required', Rule::unique('brand_translations', 'description')]];
-
-
-        }//end of for each
-
-        $request->validate($rules);
-
-        Brand::create($request->all());
-            // Redirect to the previous page successfully    
+        Brand::create($article_data); 
      
         return redirect()->route('dashboard.brands.index');
 

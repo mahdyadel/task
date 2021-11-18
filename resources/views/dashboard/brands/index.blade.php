@@ -35,7 +35,7 @@
     <div class="row">
         <div class="col-md-12">
             @if($brands->count() > 0)
-            <table class="table table-hover">
+            <table class="table table-hover" id ="example">
                 <thead>
                     <tr>
                         <th>#</th>
@@ -67,7 +67,6 @@
                 </tbody>
 
             </table>
-            {{$brands->appends(request()->query())->links()}}
             @else
             <h3 style="font-weight: 400">Sorry No Data Found </h3>
             @endif
@@ -112,5 +111,14 @@
             }
           });
     })
+  </script>
+  <script>
+    $(document).ready(function() {
+
+        var url = "{{ route('dashboard.brands.index') }}"
+        $('#example').DataTable( {
+            "ajax": url
+        } );
+    } );        
   </script>
   @endsection
