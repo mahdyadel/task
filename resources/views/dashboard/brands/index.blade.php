@@ -22,9 +22,8 @@
                         </div>
                     </div>{{--  //end of col  --}}
                     <div class="col-md-4">
-                        <button type="submit" class="btn btn-primary"><i class="fa fa-search">Search</i></button>
-                        <a href="{{ route('dashboard.brands.create') }}" class="btn btn-primary"><i class="fa fa-plus">Add</i></a>
-                        {{-- <a href="#" disabled class="btn btn-primary"><i class="fa fa-plus">Add</i></a> --}}
+                        <button type="submit" class="btn btn-primary" ><i class="fa fa-search">Search</i></button>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#addbrand"><i class="fa fa-plus">Add</i></a>
                     </div>
 
                 </div>{{--  //end of row  --}}
@@ -34,89 +33,75 @@
 
     <div class="row">
         <div class="col-md-12">
-            @if($brands->count() > 0)
-            <table class="table table-hover" id ="example">
+            {{-- @if($brands->count() > 0) --}}
+            <table class="table table-hover" id="example">
                 <thead>
                     <tr>
-                        <th>#</th>
+                        <th>id</th>
                         <th>Title</th>
-                        <th>Description</th>
-                        <th>Action</th>
+                        <th>Description</th>  
+                         <th>Action</th>
                     </tr>
                 </thead>
                 <tbody>
-                    @foreach($brands as $index=> $brand)
-{{dd($brand)}}
-                        <tr>
-                            <td>{{ $index+1 }}</td>
-                            <td>{{ $brand->title }}</td>
-                            <td>{{ $brand->description }}</td>
-                           
-                            <td>
-                        <a href="{{ route('dashboard.brands.edit' , $brand->id) }}" data-toggle="tooltip" title="edit" data-placement = "bottom" class=" float-left btn btn-sm btn-outline-warning"><i class="fa fa-edit"></i></a>
-                                    <form class="float-left ml-1" action="{{ route('dashboard.brands.destroy' , $brand->id) }}" method="post">
-                                        @csrf
-                                        @method('delete')
-                                    <a href="#" data-toggle="tooltip" title="delete" data-id="{{ $brand->id }}" data-placement = "bottom" class="dltBtn btn btn-sm btn-outline-danger"><i class="fa fa-trash"></i></a>
-            
-                                    </form>
-                                </td>
-                        </tr>
-
-                    @endforeach
+                
                 </tbody>
 
             </table>
-            @else
+            {{-- @else
             <h3 style="font-weight: 400">Sorry No Data Found </h3>
-            @endif
+            @endif --}}
         </div>
     </div>
 
-</div>{{--  //end of tile  --}}
+ 
+
+    
+
+</div>{{--  //end of title  --}}
+<!-- Modal -->
+    <div class="modal fade" id="addbrand" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        <div class="modal-body">
+            ...
+        </div>
+        <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            <button type="button" class="btn btn-primary">Save changes</button>
+        </div>
+        </div>
+    </div>
+    </div>
 
 @endsection
 
+        {{-- //ajax// --}}
 
 @section('scripts')
-<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-
-  <script>
-
-    $.ajaxSetup({
-        headers: {
-            'X-CSRF-TOKEN': $('meta[name="csrf-token"]').attr('content')
-        }
-    });
-    $('.dltBtn').click(function(e){
-        var form = $(this).closest('form');
-        var dataId = $(this).data('id');
-        e.preventDefault();
-
-        swal({
-            title: "Are you sure?",
-            text: "Once deleted, you will not be able to recover this imaginary file!",
-            icon: "warning",
-            buttons: true,
-            dangerMode: true,
-          })
-          .then((willDelete) => {
-            if (willDelete) {
-                form.submit();
-              swal("Poof! Your imaginary file has been deleted!", {
-                icon: "success",
-              });
-            } else {
-              swal("Your imaginary file is safe!");
-            }
-          });
-    })
-  </script>
-  <script>
-      $(document).ready(function() {
+ <script>
+$(document).ready(function() {
     $('#example').DataTable( {
-       
+        "processing": true,
+        "serverSide": true,
+        "ajax": {
+            "url": "{{ route('dashboard.brand.datatable') }}",
+            "type": "GET"
+        },
+        "columns": [
+            { "data": "id" },
+            { "data": "brand.title" },
+            { "data": "brand.description" },
+            {"data":  "action", orderable: false, searchable: false}
+
+        ]
     } );
 } );
-  </script>
-  @endsection
+</script>  
+@endsection

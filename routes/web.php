@@ -32,6 +32,13 @@ Route::prefix('admin')
                 // route brand
                 Route::resource('brands', 'Dashboard\BrandController')->except(['show']);
 
+                Route::get('brands-datatable', 'Dashboard\BrandController@dataTable')->name('brand.datatable');
+
+
+                Route::resource('todo', 'Dashboard\TodoController')->except(['show']);
+
+
+               
                
             });
 

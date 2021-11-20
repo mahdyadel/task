@@ -16,6 +16,6 @@ class Brand extends Model
 
     
     public function brand(){
-        return $this->hasMany(BrandTranslation::class);
+        return $this->hasOne(BrandTranslation::class);
     }
 }// end of class brand

@@ -13,6 +13,7 @@
     <meta property="og:url" content="http://pratikborsadiya.in/blog/vali-admin">
     <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
     <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
+    @yield('styles')
     <title>Tasks</title>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -42,9 +43,9 @@
 
 
     {{--  noty  --}}
-    <link rel = "stylesheet" href="{{ asset('dashboard/plugins/noty/noty.css') }}">
+    {{-- <link rel = "stylesheet" href="{{ asset('dashboard/plugins/noty/noty.css') }}">
     <script src="{{ asset('dashboard/plugins/noty/noty.min.js') }}"></script>
-
+--}}  
         <style>
             label{
                 font-weight: bold
@@ -52,7 +53,7 @@
             }
         </style>
 
-        @stack('styles')
+         @stack('styles')
 
   </head>
   <body class="app sidebar-mini">
@@ -61,11 +62,11 @@
     <!-- Sidebar menu-->
    @include('layouts.dashboard._aside')
 
-   @include('dashboard.partials._session')
+   @include('dashboard.partials._session') 
 
 
     <main class="app-content">
-      {{--  <div class="app-title">
+     <div class="app-title">
         <div>
           <h1><i class="fa fa-dashboard"></i> Dashboard</h1>
           <p>A free and open source Bootstrap 4 admin template</p>
@@ -74,7 +75,7 @@
           <li class="breadcrumb-item"><i class="fa fa-home fa-lg"></i></li>
           <li class="breadcrumb-item"><a href="#">Dashboard</a></li>
         </ul>
-      </div>  --}}
+      </div>  
 
 
      @yield('content')
@@ -86,18 +87,18 @@
     <script src="{{ asset('dashboard') }}/js/popper.min.js"></script>
 
     {{-- Select2 --}}
-    <script src="{{ asset('dashboard') }}/plugins/select2/select2.min.js"></script>
-    <script src="{{ asset('dashboard') }}/js/main.js"></script>
+    {{-- <script src="{{ asset('dashboard') }}/plugins/select2/select2.min.js"></script>
+    <script src="{{ asset('dashboard') }}/js/main.js"></script> --}}
 
     {{--  ///ajax//  --}}
 <script src="{{ asset('dashboard') }}/js/jquery-3.5.1.js"></script>
 <script src="{{ asset('dashboard') }}/js/jquery.dataTables.min.js"></script>
      {{--  Movie js  --}}
 
-    <script src="{{ asset('dashboard') }}/js/custom/movie.js"></script>
+    {{-- <script src="{{ asset('dashboard') }}/js/custom/movie.js"></script> --}}
     @yield('scripts')
 
-
+{{-- 
     <script>
 
         $.ajaxSetup({
@@ -143,7 +144,7 @@
             width:'100%'
         });
 
-    </script>
+    </script> --}}
 
 
   </body>

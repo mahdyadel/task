@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Thu Nov 18 2021 10:03:49 GMT+0200 (توقيت شرق أوروبا الرسمي)
+------------------------------------------------------
+
+Modified files:
+* app/Brand.php
+* app/BrandTranslation.php
+* app/Http/Controllers/Dashboard/BrandController.php
+* resources/views/dashboard/brands/index.blade.php
+
+
+Created files:
+* .autogit/logs/log-18-10-2021-9-33-15.txt
+
+
+Deleted files:
+
+
+Renamed files:

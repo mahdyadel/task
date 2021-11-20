@@ -4,31 +4,23 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
-use App\Brand;
-use Illuminate\Validation\Rule;
+use App\Todo;
 
-class BrandController extends Controller
+class TodoController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-   
-    public function index(Request $request)
+    public function index()
     {
-    
-        $brands = Brand::get('id');
+        $todo = Todo::all();
 
+        return view('dashboard.todo.index' , compact('todo'));
+        
+    }//end of index
 
-    //     if($request->ajax()){
-    //         return DataTables::of($brands)->make([true]);
-    // }
-
-
-
-        return view('dashboard.brands.index', compact('brands'));
-    }
     /**
      * Show the form for creating a new resource.
      *
@@ -36,7 +28,7 @@ class BrandController extends Controller
      */
     public function create()
     {
-        return view('dashboard.brands.create');
+        //
     }
 
     /**
@@ -47,23 +39,22 @@ class BrandController extends Controller
      */
     public function store(Request $request)
     {
-       
-        $article_data = [
-            'en' => [
-                'title'       => $request->input('en_title'),
-                'description' => $request->input('en_description')
-            ],
-            'es' => [
-                'title'       => $request->input('es_title'),
-                'description' => $request->input('es_description')
-            ],
-        ];
+        $this->validate($request , [
+            'title'           =>  'string|required',
+            'description'     =>  'string|required',
 
-        Brand::create($article_data); 
-     
-        return redirect()->route('dashboard.brands.index');
+        ]); //end of validation
 
-    }//end of store
+        $modal = new Todo();
+
+        $modal->title         =   $request->title;
+        $modal->description   =   $request->description;
+
+        $modal->save();
+
+        return redirect()->route('dashboard.todo.index');
+
+    }// end of store
 
     /**
      * Display the specified resource.
@@ -96,7 +87,23 @@ class BrandController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+
+        return $request>all();
+        $this->validate($request , [
+            'title'           =>  'string|required',
+            'description'     =>  'string|required',
+
+        ]); //end of validation
+
+        $modal =  Todo::find($id);
+
+        $modal->title         =   $request->title;
+        $modal->description   =   $request->description;
+
+        $modal->save();
+
+        return redirect()->route('dashboard.todo.index');
+
     }
 
     /**
@@ -107,28 +114,6 @@ class BrandController extends Controller
      */
     public function destroy($id)
     {
-   
-        $task = Brand::find($id);
-        $task->delete();
-        session()->flash('success', __('site.deleted_successfully'));
-        return redirect()->route('dashboard.brands.index');
-    }// end of destroy
-
-
-
-
-
-    public function dataTable()
-    {
-        $brands = Brand::with([
-            'brand'=>function($query){
-                $query->where('locale' , 'en');
-            }
-        ])->get();
-        
-        return response()->json(['data'=>$brands]);
-
+        //
     }
-
-}//end of controller 
-
+}

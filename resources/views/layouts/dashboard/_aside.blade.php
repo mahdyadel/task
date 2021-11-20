@@ -14,6 +14,10 @@ w<div class="app-sidebar__overlay" data-toggle="sidebar"></div>
 {{--  //brand  --}}
     <li><a class="app-menu__item " href="{{ route('dashboard.brands.index') }}"><i class="app-menu__icon fa fa-list"></i><span class="app-menu__label">Brands</span></a></li>
 
+
+    <li><a class="app-menu__item " href="{{ route('dashboard.todo.index') }}"><i class="app-menu__icon fa fa-list"></i><span class="app-menu__label">Modal</span></a></li>
+
+
    
 
 
