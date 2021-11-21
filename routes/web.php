@@ -37,9 +37,7 @@ Route::prefix('admin')->name('dashboard.')->group(function() {
                 Route::get('brands-datatable', 'Dashboard\BrandController@dataTable')->name('brand.datatable');
 
 
-                  //route datadtable get
-                //   Route::get('brands-datatable', 'Dashboard\BrandController@postData')->name('brand.postData');
-
+                 
                 
 
                     //route tiodo modal

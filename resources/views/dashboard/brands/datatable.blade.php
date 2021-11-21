@@ -7,7 +7,6 @@
   <ol class="breadcrumb">
     <li class="breadcrumb-item"><a href="{{ route('dashboard.welcome') }}">Dashboard</a></li>
     <li class="breadcrumb-item active">Brands</a></li>
-    {{--  <li class="breadcrumb-item active" aria-current="page">Data</li>  --}}
   </ol>
 </nav>
 <div class="tile mb-4">
@@ -24,7 +23,6 @@
                     <div class="col-md-4">
                         <button type="submit" class="btn btn-primary"><i class="fa fa-search">Search</i></button>
                         <a href="{{ route('dashboard.brands.create') }}" class="btn btn-primary"><i class="fa fa-plus">Add</i></a>
-                        {{-- <a href="#" disabled class="btn btn-primary"><i class="fa fa-plus">Add</i></a> --}}
                     </div>
 
                 </div>{{--  //end of row  --}}
@@ -35,7 +33,7 @@
     <div class="row">
         <div class="col-md-12">
             @if($brands->count() > 0)
-            <table class="table table-hover" id ="datatable">
+            <table class="table table-hover" id ="example">
                 <thead>
                     <tr>
                         <th>#</th>

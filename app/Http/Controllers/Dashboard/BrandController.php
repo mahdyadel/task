@@ -18,7 +18,11 @@ class BrandController extends Controller
     public function index(Request $request)
     {
     
-        $brands = Brand::get('id');
+        $brands = Brand::with([
+            'brand'=>function($query){
+                $query->where('locale' , 'en');
+            }
+        ])->get();
 
 
         return view('dashboard.brands.index', compact('brands'));
