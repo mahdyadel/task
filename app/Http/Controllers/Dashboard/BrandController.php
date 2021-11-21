@@ -21,14 +21,8 @@ class BrandController extends Controller
         $brands = Brand::get('id');
 
 
-    //     if($request->ajax()){
-    //         return DataTables::of($brands)->make([true]);
-    // }
-
-
-
         return view('dashboard.brands.index', compact('brands'));
-    }
+    }// end of index
     /**
      * Show the form for creating a new resource.
      *
@@ -37,7 +31,7 @@ class BrandController extends Controller
     public function create()
     {
         return view('dashboard.brands.create');
-    }
+    }// end of create
 
     /**
      * Store a newly created resource in storage.
@@ -74,7 +68,7 @@ class BrandController extends Controller
     public function show($id)
     {
         //
-    }
+    }//end of show
 
     /**
      * Show the form for editing the specified resource.
@@ -85,7 +79,7 @@ class BrandController extends Controller
     public function edit($id)
     {
         //
-    }
+    }//end of edit
 
     /**
      * Update the specified resource in storage.
@@ -97,7 +91,7 @@ class BrandController extends Controller
     public function update(Request $request, $id)
     {
         //
-    }
+    }// end of update
 
     /**
      * Remove the specified resource from storage.
@@ -112,6 +106,7 @@ class BrandController extends Controller
         $task->delete();
         session()->flash('success', __('site.deleted_successfully'));
         return redirect()->route('dashboard.brands.index');
+
     }// end of destroy
 
 
@@ -128,7 +123,8 @@ class BrandController extends Controller
         
         return response()->json(['data'=>$brands]);
 
-    }
+    }// end of datatable
+
 
 }//end of controller 
 

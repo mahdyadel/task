@@ -1,0 +1,33 @@
+-------------------- Auto-Git Log --------------------
+		Sat Nov 20 2021 19:10:18 GMT+0200 (توقيت شرق أوروبا الرسمي)
+------------------------------------------------------
+
+Modified files:
+* app/Brand.php
+* app/Http/Controllers/Dashboard/BrandController.php
+* composer.lock
+* resources/views/dashboard/brands/index.blade.php
+* resources/views/layouts/dashboard/_aside.blade.php
+* resources/views/layouts/dashboard/app.blade.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-18-10-2021-10-3-49.txt
+* app/Http/Controllers/Dashboard/TodoController.php
+* app/Todo.php
+* database/migrations/2021_11_18_123759_create_todos_table.php
+* public/uploads/kXRXdyejGB2r2lDkVcZ3DoT2YD3zBp43HgdWFIZ2.png
+* public/uploads/wn6JHhnW9THpEhy6s5j6KAOh9NuuSjP3dJT9Mmfy.jpg
+* resources/views/dashboard/ajax/ajax.blade.php
+* resources/views/dashboard/ajax/datatable.blade.php
+* resources/views/dashboard/ajax/edit.blade.php
+* resources/views/dashboard/ajax/table.blade.php
+* resources/views/dashboard/brands/datatable.blade.php
+* resources/views/dashboard/todo/index.blade.php
+
+
+Deleted files:
+
+
+Renamed files:

@@ -35,7 +35,7 @@
     <div class="row">
         <div class="col-md-12">
             @if($brands->count() > 0)
-            <table class="table table-hover" id ="example">
+            <table class="table table-hover" id ="datatable">
                 <thead>
                     <tr>
                         <th>#</th>

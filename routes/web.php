@@ -21,9 +21,10 @@ Route::get('/home', 'HomeController@index')->name('home');
 Route::group(['prefix' => LaravelLocalization::setLocale(), 'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeViewPath']],
     function () {
 
-Route::prefix('admin')
-                ->name('dashboard.')
-            ->group(function() {
+Route::prefix('admin')->name('dashboard.')->group(function() {
+
+                //route dashboard
+
                 Route::get('/', 'Dashboard\WelcomController@index')->name('welcome');
 
                 //route tasks
@@ -32,9 +33,16 @@ Route::prefix('admin')
                 // route brand
                 Route::resource('brands', 'Dashboard\BrandController')->except(['show']);
 
+                //route datadtable get
                 Route::get('brands-datatable', 'Dashboard\BrandController@dataTable')->name('brand.datatable');
 
 
+                  //route datadtable get
+                //   Route::get('brands-datatable', 'Dashboard\BrandController@postData')->name('brand.postData');
+
+                
+
+                    //route tiodo modal
                 Route::resource('todo', 'Dashboard\TodoController')->except(['show']);
 
 
